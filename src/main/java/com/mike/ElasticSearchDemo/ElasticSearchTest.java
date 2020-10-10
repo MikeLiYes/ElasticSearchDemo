@@ -50,7 +50,7 @@ public class ElasticSearchTest {
 	}
 	
 	
-	
+	//创建索引 
 	@Test
 	public void createIndex_blog(){
 		// 1 创建索引
@@ -60,6 +60,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//删除索引
 	@Test
 	public void deleteIndex(){
 		// 1 删除索引
@@ -69,6 +70,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//新建文档（源数据json串）
 	@Test
 	public void createIndexByJson() throws UnknownHostException {
        try{
@@ -93,6 +95,7 @@ public class ElasticSearchTest {
        }
 	}
 	
+	//新建文档（源数据map方式添加json）
 	@Test
 	public void createIndexByMap() {
 
@@ -116,6 +119,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	// 新建文档（源数据es构建器添加json）
 	@Test
 	public void createIndex() throws Exception {
 
@@ -138,6 +142,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//搜索文档数据（单个索引）
 	@Test
 	public void getData() throws Exception {
 		
@@ -151,6 +156,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//搜索文档数据（多个索引）
 	@Test
 	public void getMultiData() {
 		
@@ -173,6 +179,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//更新文档数据（update）
 	@Test
 	public void updateData() throws Throwable {
 
@@ -203,6 +210,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//更新文档数据（upsert）
 	@Test
 	public void testUpsert() throws Exception {
 
@@ -218,6 +226,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//删除文档数据（prepareDelete）
 	@Test
 	public void deleteData() {
 		
@@ -235,6 +244,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//查询所有（matchAllQuery）
 	@Test
 	public void matchAllQuery() {
 		
@@ -258,6 +268,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	// 对所有字段分词查询（queryStringQuery）
 	@Test
 	public void query() {
 		// 1 条件查询
@@ -280,6 +291,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//通配符查询（wildcardQuery）
 	@Test
 	public void wildcardQuery() {
 
@@ -303,6 +315,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//词条查询（TermQuery）
 	@Test
 	public void termQuery() {
 		
@@ -326,6 +339,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
+	//模糊查询（fuzzy）
 	@Test
 	public void fuzzy() {
 		
@@ -349,7 +363,7 @@ public class ElasticSearchTest {
 		client.close();
 	}
 	
-	
+	//映射相关操作 
 	@Test
 	public void createMapping() throws Exception {
 		
